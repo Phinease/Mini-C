@@ -3,40 +3,40 @@
 This is a compiler using ocamllex and menhir which works for some core grammar of C.
 
 Run:
-```
+`` ``
 ocamlbuild -use-menhir main.native
 ./main.native test.c
-```
+`` ``
 
 ### Structure:
-1. Analyseur lexical - lexer.mll
-2. Analyseur syntaxique - parser.mly
-3. Vérificateur de type - verificateur.ml (nom de fonctions qui commence par typage_)
-4. Main et gestion d'erreur - main.ml
-5. Interprèteur - Interpreteur.ml
+1. Lexical analyzer - lexer.mll
+2. Parser - parser.mly
+3. Type checker - verifier.ml (name of functions starting with typage_)
+4. Main and error handling - main.ml
+5. Interpreter - Interpreteur.ml
 
-### Travail réalisé:
-1. Partie minimale
-2. Boucle for (réalisé par while comme un sucre syntaxique)
-3. Opérateurs (/, mod, <=, >, >=, ==, !=, !, &&, ||)
-4. Tableaux (réalisé par definir un typ Table of typ)
-  ```
-  int table[10];    # definition
-  table[5];         # accès
-  table[6] = 10;    # écriture
-  ```
-5. Struct définition
-6. Afficheur (nom de fonctions qui commence par print_)
-7. Interprète
+### Work done:
+1. Minimum part
+2. For loop (performed by while as a syntactic sugar)
+3. Operators (/, mod, <=,>,> =, ==,! =,!, &&, ||)
+4. Tables (realized by defining a typ Table of typ)
+  `` ``
+  int table [10]; # definition
+  table [5]; #access
+  table [6] = 10; #writing
+  `` ``
+5. Struct definition
+6. Display (name of functions starting with print_)
+7. Interpreter
 
 
-### Partie pas complète:
-1. Struct accès et écriture
-2. Colonne de la position d'erreur
-3. Dans l'interpreteur, il ne connait pas des variable de parametres
+### Part not complete:
+1. Access and write structure
+2. Error position column
+3. In the interpreter, it does not know any parameter variables
 
 
 ### Test file
-1. test.c - Typage pour les phrases complèxes
-2. test2.c - Simple expérimentation pour l'interpreteur
-3. test3.c - Tester des erreurs (dans le commentaire)
+1. test.c - Typing for complete sentences
+2. test2.c - Simple experimentation for the interpreter
+3.test3.c - Testing for errors (in the comment)
