@@ -1,5 +1,6 @@
 # DM - Mini C - Compilation
 ## CHEN Shuangrui
+This is a compiler using ocamllex and menhir which works for some core grammar of C.
 
 Run:
 ```
